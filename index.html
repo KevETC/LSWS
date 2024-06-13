@@ -105,7 +105,7 @@
                 <li data-index="rs-03" data-transition="fade" data-slotamount="default" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="2000" data-fsmasterspeed="1500" class="banner-overlay" >
                     <!-- MAIN IMAGE -->
                     <div class="overlay overlay-dark opacity-6"></div>
-                    <img src="media/fingerprint1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="10" data-no-retina>
+                    <img src="media/fp_parallax.png" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="10" data-no-retina>
                     <!-- LAYER NR. 3 -->
                     <div class="tp-caption tp-resizeme z-index-8 font-light2 whitecolor text-capitalize"
                          data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
@@ -219,16 +219,16 @@
 </section>
 <!--WOrk Process ends-->
 <!--Pricing Start-->
-<section id="pricing" class="padding bglight" style="display:none;">
+<section id="pricing" class="padding bglight">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 text-center">
                 <div class="heading-title darkcolor wow fadeInUp" data-wow-delay="300ms">
-                    <span class="defaultcolor">Quisque tellus risus, adipisci </span>
-                    <h2 class="font-normal bottom30"> Pricing Offers </h2>
+                    <span class="defaultcolor" style="display:none;">Quisque tellus risus, adipisci </span>
+                    <h2 class="font-normal bottom30"> Pricing </h2>
                 </div>
             </div>
-            <div class="col-12 text-center ">
+            <div class="col-12 text-center " style="display:none;">
                 <div class="price-toggle-wrapper heading_space">
                     <span class="Pricing-toggle-button month active">Monthly</span>
                     <span class="Pricing-toggle-button year">Yearly</span>
@@ -238,52 +238,40 @@
         <div class="owl-carousel owl-theme no-dots" id="price-slider">
             <div class="item">
                 <div class="col-md-12">
-                    <div class="pricing-item wow fadeInUp animated sale" data-wow-delay="300ms" data-sale="60">
-                        <h3 class="font-light darkcolor">Basic</h3>
+                    <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms">
+                        <h3 class="font-light darkcolor">FBI</h3>
                         <p class="bottom30">The standard version</p>
-                        <div class="pricing-price darkcolor"><span class="pricing-currency">$9.95</span> /<span class="pricing-duration">month</span></div>
+                        <div class="pricing-price darkcolor"><span class="pricing-currency">$75</span></div>
                         <ul class="pricing-list">
                             <li>Support forum</li>
-                            <li>Free hosting</li>
-                            <li class="price-not">40MB of storage space</li>
-                            <li class="price-not">Social media integration</li>
-                            <li class="price-not">10GB of storage space</li>
                         </ul>
-                        <a class="button" href="javascript:void(0)">Choose plan</a>
+                        <a class="button" href="javascript:void(0)" style="display:none;">Choose plan</a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="col-md-12">
-                    <div class="pricing-item sale wow fadeInUp animated" data-wow-delay="380ms" data-sale="40">
-                        <h3 class="font-light darkcolor">Popular</h3>
+                    <div class="pricing-item wow fadeInUp animated" data-wow-delay="380ms">
+                        <h3 class="font-light darkcolor">CAL DOJ</h3>
                         <p class="bottom30">The standard version</p>
-                        <div class="pricing-price darkcolor"><span class="pricing-currency">$19.95</span> /<span class="pricing-duration">month</span></div>
+                        <div class="pricing-price darkcolor"><span class="pricing-currency">$75</span></div>
                         <ul class="pricing-list">
                             <li>Support forum</li>
-                            <li>Free hosting</li>
-                            <li>40MB of storage space</li>
-                            <li class="price-not">Social media integration</li>
-                            <li class="price-not">10GB of storage space</li>
                         </ul>
-                        <a class="button" href="javascript:void(0)">Choose plan</a>
+                        <a class="button" href="javascript:void(0)" style="display:none;">Choose plan</a>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="col-md-12">
-                    <div class="pricing-item wow fadeInUp animated sale" data-wow-delay="460ms" data-sale="30">
-                        <h3 class="font-light darkcolor">Enterprise</h3>
-                        <p class="bottom30">The standard version</p>
-                        <div class="pricing-price darkcolor"><span class="pricing-currency">$29.95</span> /<span class="pricing-duration">month</span></div>
+                    <div class="pricing-item wow fadeInUp animated" data-wow-delay="460ms">
+                        <h3 class="font-light darkcolor">FD-258</h3>
+                        <p class="bottom30">Fingerprint Card</p>
+                        <div class="pricing-price darkcolor"><span class="pricing-currency">$25</span></div>
                         <ul class="pricing-list">
                             <li>Support forum</li>
-                            <li>Free hosting</li>
-                            <li>40MB of storage space</li>
-                            <li>Social media integration</li>
-                            <li class="price-not">10GB of storage space</li>
                         </ul>
-                        <a class="button" href="javascript:void(0)">Choose plan</a>
+                        <a class="button" href="javascript:void(0)" style="display:none;">Choose plan</a>
                     </div>
                 </div>
             </div>
@@ -574,7 +562,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6" style="display: none !important;">
                 <div class="footer_panel padding_bottom_half bottom20">
                     <h3 class="whitecolor bottom25">Latest News</h3>
                     <ul class="latest_news whitecolor">
@@ -584,7 +572,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6" style="display: none !important;">
                 <div class="footer_panel padding_bottom_half bottom20 ps-0 ps-lg-5">
                     <h3 class="whitecolor bottom25">Our Services</h3>
                     <ul class="links">
