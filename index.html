@@ -21,7 +21,50 @@
     .nav-bar-item{
         color: #333333!important;
     }
+
+    #toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .toggle-link {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .toggle-link:hover {
+    border-color: #1684ac;
+  }
+  .active {
+    border-color: #1684ac;
+  }
+
+  /* p {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  } */
 </style>
+<script type="text/javascript">
+    function toggleLanguage(language) {
+  if (language === 'english') {
+    document.getElementById('whylsws_eng').style.display = 'block';
+    document.getElementById('whylsws_spa').style.display = 'none';
+    document.getElementById('english-toggle').classList.add('active');
+    document.getElementById('spanish-toggle').classList.remove('active');
+  } else if (language === 'spanish') {
+    document.getElementById('whylsws_eng').style.display = 'none';
+    document.getElementById('whylsws_spa').style.display = 'block';
+    document.getElementById('english-toggle').classList.remove('active');
+    document.getElementById('spanish-toggle').classList.add('active');
+  }
+}
+</script>
 <body data-bs-spy="scroll" data-bs-target=".navbar-nav" data-bs-offset="75" class="offset-nav">
 <!--PreLoader-->
 <div class="loader">
@@ -32,6 +75,7 @@
 <!--PreLoader Ends-->
 <!-- header -->
 <header class="site-header" id="header">
+    
     <nav class="navbar navbar-expand-lg transparent-bg static-nav" style="background-color: rgba(255, 255, 255, 0.7)!important;">
         <div class="container">
             <a class="navbar-brand" style="width: 200px !important;" href="index.html">
@@ -62,6 +106,8 @@
         <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle">
             <span></span> <span></span> <span></span>
         </a>
+
+       
     </nav>
     <!-- side menu -->
     <div class="side-menu opacity-0 gradient-bg">
@@ -95,7 +141,12 @@
                 </ul>
                 <p class="whitecolor">&copy; <span id="year"></span> Live Scan World Services, LLC</p>
             </div>
+            <div id="toggle-container">
+                <a href="#" class="toggle-link active" id="english-toggle" onclick="toggleLanguage('english'); return false;">English</a> |
+                <a href="#" class="toggle-link" id="spanish-toggle" onclick="toggleLanguage('spanish'); return false;">Español</a>
+              </div>
         </div>
+       
     </div>
     <div id="close_side_menu" class="tooltip"></div>
     <!-- End side menu -->
@@ -168,17 +219,40 @@
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="text-sm-start text-center wow fadeInLeft" data-wow-delay="300ms" style="text-align: center !important;">
-                <div class="heading-title mb-4">
-                    <h2 class="darkcolor font-normal bottom30">Why <span class="defaultcolor">Live Scan</span> World Services</h2>
+                <div style="display: block;"  id="whylsws_eng">
+                    <div class="heading-title mb-4">
+                        <h2 class="darkcolor font-normal bottom30">Why <span class="defaultcolor">Live Scan</span> World Services</h2>
+                    </div>
+                    <p class="bottom35"id="whylsws_eng">Live Scan World Services, LLC, specializes in providing efficient, accurate and secure
+                        fingerprinting services to a diverse clientele. Background checks on a federal and state level
+                        are pivotal as various pieces of information can be revealed, including past criminal
+                        convictions, and in some instances, naturalization records and immigration violations, which
+                        are all factors that may impact an individual’s eligibility when it comes to applying for some
+                        sort of benefit. Using state-of-the-art technology and API, we offer rapid FBI R.A.P (Records of
+                        Arrest and Prosecutions) results directly to you after 72 hours of electronic fingerprint
+                        transmission.</p>
                 </div>
-                <p class="bottom35">Live Scan World Services, LLC, specializes in providing efficient, accurate and secure
-                    fingerprinting services to a diverse clientele. Background checks on a federal and state level
-                    are pivotal as various pieces of information can be revealed, including past criminal
-                    convictions, and in some instances, naturalization records and immigration violations, which
-                    are all factors that may impact an individual’s eligibility when it comes to applying for some
-                    sort of benefit. Using state-of-the-art technology and API, we offer rapid FBI R.A.P (Records of
-                    Arrest and Prosecutions) results directly to you after 72 hours of electronic fingerprint
-                    transmission.</p>
+                
+                <div style="display: none;" id="whylsws_spa">
+                    <div class="heading-title mb-4">
+                        <h2 class="darkcolor font-normal bottom30">Porque <span class="defaultcolor">Live Scan</span> World Services</h2>
+                    </div>
+                    <p class="bottom35" >Live Scan World Services, LLC, se especializa en brindar servicios eficientes, precisos y seguros.
+                        servicios de toma de huellas dactilares a una clientela diversa. Verificación de antecedentes a nivel federal y estatal.
+                        son fundamentales ya que se pueden revelar diversos datos, incluidos delitos pasados
+                        condenas y, en algunos casos, antecedentes de naturalización y violaciones de inmigración, que
+                        Todos estos son factores que pueden afectar la elegibilidad de una persona cuando se trata de solicitar algunos
+                        especie de beneficio. Utilizando tecnología y API de última generación, ofrecemos rápidos FBI R.A.P (Registros de
+                        Arresto y enjuiciamiento) los resultados directamente a usted después de 72 horas de huella digital electrónica
+                        transmisión.</p>
+
+                </div>
+                
+                <div id="toggle-container">
+                    <a href="#" class="toggle-link active" id="english-toggle" onclick="toggleLanguage('english'); return false;">English</a> |
+                    <a href="#" class="toggle-link" id="spanish-toggle" onclick="toggleLanguage('spanish'); return false;">Español</a>
+                  </div>
+                    
                 <a style="display: none !important;" href="#our-team" class="button btnsecondary gradient-btn pagescroll mb-sm-0 mb-4">Learn More</a>
             </div>
             <div class="col-lg-5 offset-lg-1 col-md-5 col-sm-5 wow fadeInRight" data-wow-delay="300ms" style="display: none !important;">
@@ -188,6 +262,10 @@
     </div>
 </section>
 <!--Some Feature ends-->
+
+
+
+
 <!-- WOrk Process-->
 <section id="our-process" class="padding bgdark" style="display:none;">
     <div class="container">
@@ -256,7 +334,7 @@
                         <p class="bottom30">The standard version</p>
                         <div class="pricing-price darkcolor"><span class="pricing-currency">$75</span></div>
                         <ul class="pricing-list">
-                            <li>Mobile Services (add. fee)</li>
+                            <li>In house fee</li>
                         </ul>
                         <a class="button" href="javascript:void(0)" style="display:none;">Choose plan</a>
                     </div>
@@ -269,7 +347,7 @@
                         <p class="bottom30">The standard version</p>
                         <div class="pricing-price darkcolor"><span class="pricing-currency">$75</span></div>
                         <ul class="pricing-list">
-                            <li>Mobile Services  (add. fee)</li>
+                            <li>In house fee</li>
                         </ul>
                         <a class="button" href="javascript:void(0)" style="display:none;">Choose plan</a>
                     </div>
@@ -282,7 +360,7 @@
                         <p class="bottom30">Fingerprint Card</p>
                         <div class="pricing-price darkcolor"><span class="pricing-currency">$25</span></div>
                         <ul class="pricing-list">                            
-                            <li>Mobile Services (add. fee)</li>
+                            <li>In house fee</li>
                         </ul>
                         <a class="button" href="javascript:void(0)" style="display:none;">Choose plan</a>
                     </div>
@@ -469,7 +547,7 @@
                         </div>
                         <p class="bottom10" style="display: none !important;">Address: 1234 S Street Ave Los Angeles, CA 90011</p>
                         <p class="bottom10">(213) 773 - 2169</p>
-                        <p class="bottom10"><a href="mailto:polpo@traxagency.co.au">livescanworldservices@outlook.com</a></p>
+                        <p class="bottom10"><a href="mailto:contact@livescanworldservices.com">contact@livescanworldservices.com</a></p>
                         <p class="bottom10">Mon-Fri: 9am-5pm</p>
                         <p class="bottom10">Sat: 7am-3pm</p>
                         <p class="bottom10">Sun: 11am-3pm</p>
